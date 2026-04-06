@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>drank.wtf</title>
+    <meta name="theme-color" content="#0a0a0a" />
+    <style>
+      html,
+      body {
+        margin: 0;
+        min-height: 100%;
+        background: #0a0a0a;
+      }
+    </style>
+    <script>
+      (function () {
+        const location = window.location;
+        const redirectTarget = `/?p=${encodeURIComponent(location.pathname)}${location.search ? `&q=${encodeURIComponent(location.search.slice(1))}` : ''}${location.hash}`;
+
+        window.location.replace(redirectTarget);
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
